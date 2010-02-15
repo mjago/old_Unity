@@ -133,9 +133,9 @@ void UnityPrintMask(const unsigned long mask, const unsigned long number)
     }
 }
 
-void UnityTestResultsBegin(const long line)
+void UnityTestResultsBegin(const char* file, const long line)
 {
-    UnityPrint(Unity.TestFile);
+    UnityPrint(file);
     UNITY_OUTPUT_CHAR(':');
     UnityPrintNumber(line);
     UNITY_OUTPUT_CHAR(':');
@@ -145,7 +145,7 @@ void UnityTestResultsBegin(const long line)
 
 void UnityTestResultsFailBegin(const long line)
 {
-    UnityTestResultsBegin(line);
+    UnityTestResultsBegin(Unity.AssertContainerFile, line);
     UnityPrint("FAIL:");
 }
 
@@ -157,7 +157,7 @@ void UnityConcludeTest()
     }
     else if (!Unity.CurrentTestFailed)
     {
-        UnityTestResultsBegin(Unity.CurrentTestLineNumber);
+        UnityTestResultsBegin(Unity.TestFile, Unity.CurrentTestLineNumber);
         UnityPrint("PASS\n");
     }
     else
@@ -589,7 +589,7 @@ void UnityAssertEqualMemoryArray(const void* expected,
 void UnityFail(const char* message, const long line)
 {
     Unity.CurrentTestFailed = 1;
-    UnityTestResultsBegin(line);
+    UnityTestResultsBegin(Unity.AssertContainerFile, line);
     UnityPrint("FAIL");
     if (message != NULL)
     {
@@ -602,7 +602,7 @@ void UnityFail(const char* message, const long line)
 void UnityIgnore(const char* message, const long line)
 {
     Unity.CurrentTestIgnored = 1;
-    UnityTestResultsBegin(line);
+    UnityTestResultsBegin(Unity.AssertContainerFile, line);
     UnityPrint("IGNORE");
     if (message != NULL)
     {
