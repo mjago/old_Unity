@@ -48,7 +48,7 @@ class UnityTestRunnerGenerator
       create_externs(output, tests, used_mocks)
       create_mock_management(output, used_mocks)
       create_runtest(output, used_mocks)
-	    create_reset(output, used_mocks)
+      create_reset(output, used_mocks)
       create_main(output, module_name, tests)
     end
     
@@ -215,7 +215,7 @@ class UnityTestRunnerGenerator
     output.puts("  UnityBegin();")
     output.puts()
 
-    output.puts("  // RUN_TEST calls runTest")  	
+    output.puts("  // RUN_TEST calls runTest")    
     tests.each do |test|
       output.puts("  RUN_TEST(#{test[:name]}, #{test[:line_number]});")
     end

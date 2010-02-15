@@ -90,7 +90,7 @@ void UnityPrintNumberUnsigned(const unsigned long number)
 void UnityPrintNumberHex(const unsigned long number, const char nibbles_to_print)
 {
     unsigned long nibble;
-	char nibbles = nibbles_to_print;
+  char nibbles = nibbles_to_print;
     UnityPrint("0x");
 
     while (nibbles > 0)
@@ -145,7 +145,7 @@ void UnityTestResultsBegin(const long line)
 
 void UnityTestResultsFailBegin(const long line)
 {
-		UnityTestResultsBegin(line);
+    UnityTestResultsBegin(line);
     UnityPrint("FAIL:");
 }
 
@@ -157,8 +157,8 @@ void UnityConcludeTest()
     }
     else if (!Unity.CurrentTestFailed)
     {
-				UnityTestResultsBegin(Unity.CurrentTestLineNumber);
-				UnityPrint("PASS\n");
+        UnityTestResultsBegin(Unity.CurrentTestLineNumber);
+        UnityPrint("PASS\n");
     }
     else
     {
@@ -531,8 +531,8 @@ void UnityAssertEqualMemoryArray(const void* expected,
                                  const char* msg,
                                  const unsigned short lineNumber)
 {
-	  unsigned char* expected_ptr = (unsigned char*)expected;
-	  unsigned char* actual_ptr = (unsigned char*)actual;	
+    unsigned char* expected_ptr = (unsigned char*)expected;
+    unsigned char* actual_ptr = (unsigned char*)actual; 
     unsigned long elements = num_elements;
     if ((elements == 0) || (length == 0))
     {
@@ -591,11 +591,11 @@ void UnityFail(const char* message, const long line)
     Unity.CurrentTestFailed = 1;
     UnityTestResultsBegin(line);
     UnityPrint("FAIL");
-		if (message != NULL)
-		{
-    	UNITY_OUTPUT_CHAR(':');
-    	UnityPrint(message);
-		}
+    if (message != NULL)
+    {
+      UNITY_OUTPUT_CHAR(':');
+      UnityPrint(message);
+    }
     UNITY_OUTPUT_CHAR('\n');
 }
 
@@ -604,11 +604,11 @@ void UnityIgnore(const char* message, const long line)
     Unity.CurrentTestIgnored = 1;
     UnityTestResultsBegin(line);
     UnityPrint("IGNORE");
-		if (message != NULL)
-		{
-    	UNITY_OUTPUT_CHAR(':');
-    	UnityPrint(message);
-		}
+    if (message != NULL)
+    {
+      UNITY_OUTPUT_CHAR(':');
+      UnityPrint(message);
+    }
     UNITY_OUTPUT_CHAR('\n');
 }
 
