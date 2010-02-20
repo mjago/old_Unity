@@ -16,3 +16,12 @@ Unity is a unit test framework written entirely in the C language. It has specia
 h2. Local changes...
 
 to do
+
+h2. Try Out...
+
+* Dependencies...
+# Unity
+# gcc C compiler (MinGW on Windows)
+# ruby >= 1.8.6
+* cd path/to/Unity
+* rake
