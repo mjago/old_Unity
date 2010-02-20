@@ -5,4 +5,11 @@ build/*.exe
 build/*.testpass
 build/*.testfail
 
+examples/build/*.c
+examples/build/*.h
+examples/build/*.o
+examples/build/*.exe
+examples/build/*.testpass
+examples/build/*.testfail
+
 
