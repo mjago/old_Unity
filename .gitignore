@@ -1,0 +1,8 @@
+build/*.c
+build/*.h
+build/*.o
+build/*.exe
+build/*.testpass
+build/*.testfail
+
+
