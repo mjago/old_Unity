@@ -211,10 +211,10 @@ void UnityAssertFloatsWithin(const _UF delta,
 // these are the macros you are looking for
 
 #define TEST_ASSERT_MESSAGE(condition, message) if (condition) {} else {TEST_FAIL(message);}
-#define TEST_ASSERT(condition) TEST_ASSERT_MESSAGE(condition, NULL)
 
 #define TEST_ASSERT_TRUE_MESSAGE(condition, message) TEST_ASSERT_MESSAGE(condition, message)
 #define TEST_ASSERT_TRUE(condition) TEST_ASSERT_MESSAGE(condition, "Expected TRUE was FALSE.")
+#define TEST_ASSERT(condition) TEST_ASSERT_MESSAGE(condition, "Expected TRUE was FALSE.")
 
 #define TEST_ASSERT_UNLESS_MESSAGE(condition, message) TEST_ASSERT_MESSAGE(!(condition), message)
 #define TEST_ASSERT_UNLESS(condition) TEST_ASSERT(!(condition))
