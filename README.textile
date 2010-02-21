@@ -18,13 +18,20 @@ h2. Local changes to this Fork...
 
 * NOTE: Most of the changes to this fork require the use of the ruby helpers
 and rake
+
 # Added colour support (requires win32 gem on windows)
-# Added support for test file filtering via test_file_filter.yml
+# Added support for test file filtering via
+# _test_file_filter.yml_. Test file filtering is overridden by 
+ _rake cruise_, _rake ci_ and _rake all_unit_tests_ for _continuous integration_ purposes
 # Added TEST_ONLY() macro. Within a test function causes just this
 test to be run). Used in conjunction with
 test_file_filtering
 # Fixed TEST_ASSERT() macro (was catching a FALSE assertion but wasn't
 displaying anything)
+# added test_runner.watchr for continuous testing. > watchr
+test_runner.watchr causes the watchr daemon to run the tests
+automatically  when a test or source file is modified (saved). Modify test_runner.watchr to suit your
+project. Requires the watchr gem
 
 h2. Try Out (with gcc)...
 
@@ -35,6 +42,7 @@ h3. Dependencies...
 # "ruby >= 1.8.6":http://www.ruby-lang.org/en/downloads 
 # rake _gem install rake_
 # win32API (for colour on windows)  _gem install win32API_
+# watchr (for continuous testing) _gem install watchr_
 
 h3. Go!...
 
