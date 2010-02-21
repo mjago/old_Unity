@@ -16,16 +16,20 @@ Unity is a unit test framework written entirely in the C language. It has specia
 
 h2. Local changes to this Fork...
 
-Added colour support (requires win32 gem on windows)
+# NOTE: Most of the changes to this fork require the use of the ruby helpers
+and rake
+# Added colour support (requires win32 gem on windows)
+# Added support for test file filtering via test_file_filter.yml
 
 h2. Try Out (with gcc)...
 
 h3. Dependencies...
 
 # Unity
-# gcc C compiler (MinGW on Windows)
-# ruby >= 1.8.6
-# rake
+# gcc C compiler "(MinGW on Windows)":http://www.mingw.org/category/wiki/download
+# "ruby >= 1.8.6":http://www.ruby-lang.org/en/downloads/ 
+# rake _gem install rake_
+# win32API (for colour on windows)  _gem install win32API_
 
 h3. Go!...
 
