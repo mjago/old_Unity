@@ -1,18 +1,34 @@
 h1. Fork of Unity 
 
-This is a fork of Unity which is hosted on "SourceForge.net":https://embunity.svn.sourceforge.net/svnroot/embunity
+This is a fork of Unity which is hosted on "SourceForge.net":http://sourceforge.net/projects/embunity/
 
 h2. Maintainers...
+
 * *Greg Williams* 
 * *Mark Karlesky* 
 * *Mark Vandervoord*. 
 
-Get the latest official Binaries or the Subversion 'bleeding edge' from "SourceForge.net":https://embunity.svn.sourceforge.net/svnroot/embunity
+Get the latest official Binaries or the Subversion 'bleeding edge' from "SourceForge.net":http://sourceforge.net/projects/embunity/
 
 h2. What is Unity?
 
 Unity is a unit test framework written entirely in the C language. It has special features for embedded systems. It has scaled well from small to large embedded projects, but can be used for any C project.
 
-h2. Local changes...
+h2. Local changes to this Fork...
 
-to do
+Added colour support (requires win32 gem on windows)
+
+h2. Try Out (with gcc)...
+
+h3. Dependencies...
+
+# Unity
+# gcc C compiler (MinGW on Windows)
+# ruby >= 1.8.6
+# rake
+
+h3. Go!...
+
+* cd path/to/Unity
+* rake
+
