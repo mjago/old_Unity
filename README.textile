@@ -37,18 +37,18 @@ h2. Try Out (with gcc)...
 
 h3. Dependencies...
 
-# Unity _git clone git@github.com:mjago/Unity.git_
-# gcc C compiler "(MinGW on Windows)":http://www.mingw.org/category/wiki/download
-# "ruby >= 1.8.6":http://www.ruby-lang.org/en/downloads 
-# rake _gem install rake_
-# win32API (for colour on windows)  _gem install win32API_
-# watchr (for continuous testing) _gem install watchr_
+# *Unity* _git clone git@github.com:mjago/Unity.git_
+# *gcc C compiler* "(MinGW on Windows)":http://www.mingw.org/category/wiki/download
+# *ruby >= 1.8.6* (http://www.ruby-lang.org/en/downloads) 
+# *rake* _gem install rake_
+# *win32API* (for colour on windows)  _gem install win32API_
+# *watchr* (for continuous testing) _gem install watchr_
 
 h3. Go!...
 
-* cd path/to/Unity
-* rake
+bc. cd path/to/Unity
+rake
 
-h3. Screenshot...
+h2. Screenshot...
 
 !http://github.com/mjago/Unity/raw/master/docs/screenshot.jpg!
