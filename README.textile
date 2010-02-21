@@ -50,7 +50,7 @@ rake
 
 h3. Or with Continuous Testing...
 
-bc cd path/to/Unity
+bc. cd path/to/Unity
 watchr test_runner.watchr
 
 h2. Screenshot...
