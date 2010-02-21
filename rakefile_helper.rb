@@ -3,12 +3,12 @@ require 'fileutils'
 require 'auto/unity_test_summary'
 require 'auto/generate_test_runner'
 require 'auto/colour_prompt'
+require 'auto/test_file_filter'
 
 module RakefileHelpers
 
   C_EXTENSION = '.c'
   COLOUR = true
-
   
   def report(message)
     if not COLOUR
@@ -61,12 +61,31 @@ module RakefileHelpers
     configure_clean
   end
   
-  def get_unit_test_files
+  def get_unit_test_files(tests_to_run = :selective)
     path = $cfg['compiler']['unit_tests_path'] + 'test*' + C_EXTENSION
     path.gsub!(/\\/, '/')
-    FileList.new(path)
-  end
-  
+    test_file_filter = TestFileFilter.new
+    if (tests_to_run == :all) ||
+        (test_file_filter.all_files == true)
+      list = FileList.new(path)
+      
+    elsif not test_file_filter.only_files.nil?
+      list = FileList.new
+      test_file_filter.only_files.each do |f|
+        list.include [$cfg['compiler']['unit_tests_path'] + f]
+      end
+      
+    else
+      list = FileList.new(path)
+      if not test_file_filter.exclude_files.nil?
+        test_file_filter.exclude_files.each do |f|
+          list.exclude $cfg['compiler']['unit_tests_path'] + f
+        end
+      end
+    end
+    list
+  end  
+
   def get_local_include_dirs
     include_dirs = $cfg['compiler']['includes']['items'].dup
     include_dirs.delete_if {|dir| dir.is_a?(Array)}

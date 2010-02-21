@@ -21,11 +21,16 @@ task :summary do
   report_summary
 end
 
+desc "Run all tests (overrides test_file_filter)"
+task :all_unit_tests do
+  run_tests get_unit_test_files(:all)
+end
+
 desc "Build and test Unity"
 task :all => [:clean, :unit, :summary]
 task :default => [:clobber, :all]
-task :ci => [:default]
-task :cruise => [:default]
+task :ci => [:all_unit_tests]
+task :cruise => [:all_unit_tests]
 
 desc "Load configuration"
 task :config, :config_file do |t, args|
