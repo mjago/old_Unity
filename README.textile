@@ -20,6 +20,9 @@ h2. Local changes to this Fork...
 and rake
 # Added colour support (requires win32 gem on windows)
 # Added support for test file filtering via test_file_filter.yml
+# Added TEST_ONLY() macro. Within a test function causes just this
+test to be run (from this file). Used in conjunction with
+test_file_filtering to isolate from tests in other test files."
 
 h2. Try Out (with gcc)...
 
@@ -36,3 +39,6 @@ h3. Go!...
 * cd path/to/Unity
 * rake
 
+h3. Screenshot...
+
+!docs/screenshot.jpg!
