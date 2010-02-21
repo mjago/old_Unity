@@ -1,3 +1,4 @@
+File.expand_path(File.join(File.dirname(__FILE__),'colour_prompt'))
 
 class UnityTestRunnerGenerator
 
@@ -69,6 +70,8 @@ class UnityTestRunnerGenerator
     lines.each do |line|
       if line =~ /^\s*void\s+test(.*?)\s*\(\s*void\s*\)/
         tests << "test" + $1
+      elsif line =~ /^\s*TEST_ONLY()/
+        return tests[-1]
       end
     end
     return tests

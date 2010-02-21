@@ -345,6 +345,7 @@ void UnityAssertFloatsWithin(const _UF delta,
 #define TEST_FAIL(message) { Unity.TestFile=__FILE__; UnityFail((message), (unsigned short)__LINE__); TEST_ABORT(); }
 #define TEST_IGNORE_MESSAGE(message) { Unity.TestFile=__FILE__; UnityIgnore((message), (unsigned short)__LINE__); TEST_ABORT(); }
 #define TEST_IGNORE() TEST_IGNORE_MESSAGE(NULL)
+#define TEST_ONLY() 
 
 #ifdef UNITY_EXCLUDE_FLOAT
 #define TEST_ASSERT_FLOAT_WITHIN_MESSAGE(delta, expected, actual, message)  TEST_FAIL("Unity Floating Point Disabled");
