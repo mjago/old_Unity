@@ -32,7 +32,7 @@ h3. Dependencies...
 
 # Unity
 # gcc C compiler "(MinGW on Windows)":http://www.mingw.org/category/wiki/download
-# "ruby >= 1.8.6":http://www.ruby-lang.org/en/downloads/ 
+# "ruby >= 1.8.6":http://www.ruby-lang.org/en/downloads 
 # rake _gem install rake_
 # win32API (for colour on windows)  _gem install win32API_
 
