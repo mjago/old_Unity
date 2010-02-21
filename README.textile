@@ -1,13 +1,12 @@
 h1. Fork of Unity 
 
-This is a fork of Unity which is hosted on "SourceForge.net":https://embunity.svn.sourceforge.net/svnroot/embunity
-
+This is a fork of Unity which is hosted on "SourceForge.net":http://sourceforge.net/projects/embunity/
 h2. Maintainers...
 * *Greg Williams* 
 * *Mark Karlesky* 
 * *Mark Vandervoord*. 
 
-Get the latest official Binaries or the Subversion 'bleeding edge' from "SourceForge.net":https://embunity.svn.sourceforge.net/svnroot/embunity
+Get the latest official Binaries or the Subversion 'bleeding edge' from "SourceForge.net":http://sourceforge.net/projects/embunity/
 
 h2. What is Unity?
 
