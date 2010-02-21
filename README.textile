@@ -48,6 +48,11 @@ h3. Go!...
 bc. cd path/to/Unity
 rake
 
+h3. Or with Continuous Testing...
+
+bc cd path/to/Unity
+watchr test_runner.watchr
+
 h2. Screenshot...
 
 !http://github.com/mjago/Unity/raw/master/docs/screenshot.jpg!
