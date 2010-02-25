@@ -36,7 +36,7 @@ h2. Try Out (with gcc)...
 
 h3. Dependencies...
 
-# *Unity* _git clone git@github.com:mjago/Unity.git_
+# *Unity* _git clone "git://github.com/mjago/Unity.git":git://github.com/mjago/Unity.git"
 # *gcc C compiler* "(MinGW on Windows)":http://www.mingw.org/category/wiki/download
 # *ruby >= 1.8.6* ("Ruby Downloads":http://www.ruby-lang.org/en/downloads) 
 # *rake* _gem install rake_
