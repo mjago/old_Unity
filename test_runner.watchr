@@ -4,8 +4,8 @@ PATH_TO_RAKE_EXE = 'C:\ruby\bin\rake.bat'
 LIB_C_FILES      = 'lib/*.*\.c'
 LIB_H_FILES      = 'lib/*.*\.h'
 ALL_C_TEST_FILES = 'test/test*.*\.c'
-
-files_to_test = [ALL_C_TEST_FILES, LIB_C_FILES, LIB_H_FILES]
+TEST_FILE_FILTER = 'auto/test_file_filter.yml'
+files_to_test = [ALL_C_TEST_FILES,LIB_C_FILES,LIB_H_FILES,TEST_FILE_FILTER]
 
 def run_rake
   system ("#{PATH_TO_RAKE_EXE} --silent")

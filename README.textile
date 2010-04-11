@@ -19,7 +19,8 @@ h2. Local changes to this Fork...
 * NOTE: Most of the changes to this fork require the use of the ruby helpers
 and rake
 
-# Added *colour support* (requires win32 gem on windows)
+# Added *colour support* (requires win32 gem on windows) (now incorporated
+into svn trunk)
 # Added support for *test file filtering*. 
 Test file filtering is controlled by modifying  "test_file_filter.yml":http://github.com/mjago/Unity/blob/master/test_file_filter.yml. For *continuous integration* purposes, test file filtering can be overridden with *rake cruise*, *rake ci*, or *rake all_unit_tests*
 # Added *TEST_ONLY()* macro. Within a test function causes just this

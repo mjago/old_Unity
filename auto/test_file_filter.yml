@@ -1,0 +1,42 @@
+--- 
+ 
+#   #   #   #   Run All Tests  #   #   #   #
+:all_files: 
+  
+# uncomment true to run all tests...
+ 
+# true
+  
+#   #   #   #   Run Just These Tests  #   #   #   #
+:only_files:             
+
+# put files to test only here...
+
+# - 'test_just_me.c'
+# - 'test_just_me_too.c'
+
+#   #   #   #   Ignore These Tests       #   #   #   #   #   
+:exclude_files:
+
+# put test files to ignore here...
+
+# - 'test_ignore_me.c'
+# - 'test_ignore_me_too.c'
+
+# NOTE:
+#
+#  rake cruise or rake ci
+#    runs all tests regardless of settings here
+#
+#  otherwise...
+#
+# :all_files: true 
+#    has highest priority 
+#
+# :only_files:
+#    has next highest priority
+#
+# :exclude_files:
+#    has least highest priority
+#
+# i.e. excluded files list ignored if only files specified

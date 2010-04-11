@@ -1,0 +1,10 @@
+K 10
+svn:ignore
+V 38
+*.obj
+*.exe
+*.testfail
+*.testpass
+*.c
+
+END
