@@ -22,7 +22,10 @@ and rake
 # Added *colour support* (requires win32 gem on windows) (now incorporated
 into svn trunk)
 # Added support for *test file filtering*. 
-Test file filtering is controlled by modifying  "test_file_filter.yml":http://github.com/mjago/Unity/blob/master/test_file_filter.yml. For *continuous integration* purposes, test file filtering can be overridden with *rake cruise*, *rake ci*, or *rake all_unit_tests*
+Test file filtering is controlled by modifying
+"test_file_filter.yml":http://github.com/mjago/Unity/blob/master/test_file_filter.yml. For
+*continuous integration* purposes, test file filtering can be
+overridden with *rake cruise*, or *rake ci*
 # Added *TEST_ONLY()* macro. Within a test function causes just this
 test to be run). Used in conjunction with
 test_file_filtering
